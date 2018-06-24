@@ -1,0 +1,31 @@
+{
+  "name": "2018_web-711",
+  "version": "1.0.0",
+  "description": "custom FAQ for LRR, web-711",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matzy20/2018_WEB-711.git"
+  },
+  "keywords": [
+    "faq",
+    "accordion",
+    "tabs",
+    "bootstrap",
+    "responsive"
+  ],
+  "author": "gail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matzy20/2018_WEB-711/issues"
+  },
+  "homepage": "https://github.com/matzy20/2018_WEB-711#readme"
+}
