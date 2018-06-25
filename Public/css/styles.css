@@ -1,9 +1,9 @@
 #myInput {
   background-image: url('/css/searchicon_v2.png');
-  background-position: 10px 12px;
+  background-position: 10px 8px;
   background-repeat: no-repeat;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+  padding: 8px 4px 8px 39px;
+  border: 2px solid #f2f2f2;
+  margin-bottom: 0px;
 }

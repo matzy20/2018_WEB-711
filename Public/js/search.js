@@ -10,7 +10,6 @@ function myFunction() {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
-
         }
     }
 }
