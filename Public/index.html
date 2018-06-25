@@ -4,6 +4,7 @@
   <title>Custom FAQ</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,12 +15,13 @@
   <h2>Rental FAQ</h2>
   <p>Your one-stop-shop for questions and resources related to each rental's appliances, electronics, and more.</p>
 
-  <ul class="nav nav-tabs">
+  <ul id="myUL" class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#kitchenAppliances">Kitchen Appliances</a></li>
     <li><a data-toggle="tab" href="#bathroomAppliances">Bathroom Appliances</a></li>
     <li><a data-toggle="tab" href="#washerDryer">Washer and Dryer</a></li>
     <li><a data-toggle="tab" href="#electronics">Electronics</a></li>
     <li><a data-toggle="tab" href="#utilities">Utilities</a></li>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
   </ul>
 
   <div class="tab-content">
@@ -45,6 +47,6 @@
     </div>
   </div>
 </div>
-
+<script src="/js/search.js" type="text/javascript"></script>
 </body>
 </html>
