@@ -6,15 +6,17 @@ function myFunction() {
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
-        console.log(li[i]);
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            //console.log(a.innerHTML);
-            li[i].style.display = "";
+            $(li[i]).css("border", "solid red 2px");
         } else {
-            li[i].style.display = "none";
+            //li[i].style.display = "none";
         }
     }
 }
-/**LEFT OFF: start working on a search via the tab content, in addition
-tab list, then working on styling for results (list and content) located
+/**
+TO DO'S:
+1. Search is working for tabs AND tabs' content
+2. Once phrase or letters inputted, enter will return results
+3. Style Results
+4. Start working on accordions
 **/
