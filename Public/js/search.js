@@ -5,17 +5,13 @@ function myFunction() {
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
     container = document.getElementsByClassName("container");
+    textReview = container[0].textContent.toUpperCase().search(filter);
 
-    console.log(container[0].textContent.toUpperCase().search(filter));
-    /**for (i = 0; i < container.length; i++) {
-        //a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            $(li[i]).css("border", "solid red 2px");
-        } else {
-            //li[i].style.display = "none";
-        }
-
-    }**/
+    if (textReview > 0) {
+        console.log('I found ' + filter + ' at ' + textReview);
+    } else {
+        console.log('No results matched your search. Please try a different search');
+    }
 }
 /**
 TO DO'S:
