@@ -4,14 +4,18 @@ function myFunction() {
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
+    container = document.getElementsByClassName("container");
+
+    console.log(container[0].textContent.toUpperCase().search(filter));
+    /**for (i = 0; i < container.length; i++) {
+        //a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
             $(li[i]).css("border", "solid red 2px");
         } else {
             //li[i].style.display = "none";
         }
-    }
+
+    }**/
 }
 /**
 TO DO'S:
