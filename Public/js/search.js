@@ -4,12 +4,16 @@ function myFunction() {
     filter = input.value.toUpperCase();
     tabs = document.getElementById("myUL").innerHTML;
     tabContent = document.getElementsByClassName("tab-pane");
+    container = document.getElementsByClassName("container");
+
 
     for(i=0; i < tabContent.length; i++) {
-      console.log('tabContent: ', tabContent[i].innerHTML);
       var textReview = tabContent[i].innerHTML.toUpperCase().search(filter);
-      if(textReview > 0){
-        console.log('found result here: ' + textReview);
+      var textContentReview = container[0].textContent.toUpperCase().search(filter);
+
+      if(textReview > 0 && textContentReview > 0){
+        console.log('found results in tab here: ' + textReview);
+        console.log('found results in content here', textContentReview);
       }
       else{
         console.log('no results');
@@ -28,6 +32,7 @@ function myFunction() {
 TO DO'S:
 1. Search is working for tabs' content
 1.b. Need to also find a way to also search through 'tabs' and
+1.c. iterate over container?
 2. Once phrase or letters inputted, enter will return results
 3. Style Results
 4. Start working on accordions
