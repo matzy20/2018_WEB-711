@@ -5,28 +5,22 @@ function myFunction() {
     tabs = document.getElementById("myUL").innerHTML;
     tabContent = document.getElementsByClassName("tab-pane");
     container = document.getElementsByClassName("container");
-
+    console.log('tabs', tabs);
 
     for(i=0; i < tabContent.length; i++) {
-      var textReview = tabContent[i].innerHTML.toUpperCase().search(filter);
-      var textContentReview = container[0].textContent.toUpperCase().search(filter);
+      var tabReview = tabContent[i].innerHTML.toUpperCase().search(filter);
+      var tabTextReview = container[0].textContent.toUpperCase().search(filter);
 
-      if(textReview > 0 && textContentReview > 0){
-        console.log('found results in tab here: ' + textReview);
-        console.log('found results in content here', textContentReview);
+      if((tabReview > 0 || tabTextReview > 0) && event.keyCode === 13){
+        console.log('found results in tab here: ' + tabContent[i].innerHTML);
+
+        console.log('found results in tab text here', tabTextReview);
       }
+
       else{
         console.log('no results');
       }
     }
-
-
-
-    /**if (textReview > 0 && event.keyCode === 13) {
-        $(textLocator).css("border", "solid red 2px");
-    } else {
-        //console.log('No results matched your search. Please try a different search');
-    }**/
 }
 /**
 TO DO'S:
