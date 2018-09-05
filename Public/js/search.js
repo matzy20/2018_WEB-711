@@ -6,19 +6,18 @@ function myFunction() {
     tabContent = document.getElementsByClassName("tab-pane");
     container = document.getElementsByClassName("container");
 
-    console.log('tabs', tabs);
-    for(i=0; i < tabs[i].length; i++) {
-      //console.log(container[i]);
-      /**var tabReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
-      var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
+
+    for(i=0; i < tabs.length; i++) {
+      tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
+      //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
       if(tabReview > -1  && event.keyCode === 13){
-        console.log('tabTextReview', tabTextReview);
+        tabs[i].style.border = "solid 2px red";
       }
 
       else{
-        console.log('no results');
-      }**/
+        //tabReview[i].style.display = "none";
+      }
     }
 }
 /**
