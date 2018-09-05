@@ -11,12 +11,14 @@ function myFunction() {
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
-      if(tabReview > -1  && event.keyCode === 13){
-        tabs[i].style.border = "solid 2px red";
+      if(tabReview > -1){
+        //TO DO: find a way to add/remove 'active' on li based on input
+        tabs[i] = $(this);
+        $(this).addClass('active');
       }
 
       else{
-        //tabReview[i].style.display = "none";
+        $(this).removeClass('active');
       }
     }
 }
