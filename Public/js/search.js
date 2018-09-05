@@ -2,24 +2,23 @@ function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    tabs = document.getElementById("myUL").innerHTML;
+    tabs = document.getElementsByTagName("li");
     tabContent = document.getElementsByClassName("tab-pane");
     container = document.getElementsByClassName("container");
+
     console.log('tabs', tabs);
+    for(i=0; i < tabs[i].length; i++) {
+      //console.log(container[i]);
+      /**var tabReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
+      var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
-    for(i=0; i < tabContent.length; i++) {
-      var tabReview = tabContent[i].innerHTML.toUpperCase().search(filter);
-      var tabTextReview = container[0].textContent.toUpperCase().search(filter);
-
-      if((tabReview > 0 || tabTextReview > 0) && event.keyCode === 13){
-        console.log('found results in tab here: ' + tabContent[i].innerHTML);
-
-        console.log('found results in tab text here', tabTextReview);
+      if(tabReview > -1  && event.keyCode === 13){
+        console.log('tabTextReview', tabTextReview);
       }
 
       else{
         console.log('no results');
-      }
+      }**/
     }
 }
 /**
