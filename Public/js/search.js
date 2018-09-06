@@ -12,9 +12,9 @@ function myFunction() {
       //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
       if(tabReview > -1){
-        //TO DO: find a way to add/remove 'active' on li based on input
-        tabs[i] = $(this);
-        $(this).addClass('active');
+
+        console.log(tabs[i], $(this)[0].tabContent);
+        //$this.add('active');
       }
 
       else{
