@@ -12,13 +12,11 @@ function myFunction() {
       //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
       if(tabReview > -1){
-
-        console.log(tabs[i], $(this)[0].tabContent);
-        //$this.add('active');
+        tabs[i].classList.add('active');
       }
 
       else{
-        $(this).removeClass('active');
+        tabs[i].classList.remove('active');
       }
     }
 }
