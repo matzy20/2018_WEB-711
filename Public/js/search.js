@@ -11,10 +11,15 @@ function myFunction() {
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
 
-      if(tabReview > -1){
+      if(tabReview > 0){
         tabs[i].classList.add('active');
+        console.log($("#myInput").val());
       }
+      //TO DO: if empty input, make kitchen tab active
+      else if($.trim($("#myInput").val()) === " "){
+        document.getElementById("firstTab").classList.add('active');
 
+      }
       else{
         tabs[i].classList.remove('active');
       }

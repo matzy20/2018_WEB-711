@@ -7,3 +7,8 @@
   border: 2px solid #f2f2f2;
   margin-bottom: 0px;
 }
+
+.nav-tabs>li.active>a {
+  border: solid 2px #337ab7 !important;
+  border-bottom-color: #337ab7;
+}
