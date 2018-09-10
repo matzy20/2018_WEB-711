@@ -5,19 +5,19 @@ function myFunction() {
     tabs = document.getElementsByTagName("li");
     tabContent = document.getElementsByClassName("tab-pane");
     container = document.getElementsByClassName("container");
-
+    var inputCheck = $.trim($("#myInput").val());
 
     for(i=0; i < tabs.length; i++) {
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
+      //TO DO: search through tab's textContent
       //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
-
       if(tabReview > 0){
         tabs[i].classList.add('active');
-        console.log($("#myInput").val());
       }
       //TO DO: if empty input, make kitchen tab active
-      else if($.trim($("#myInput").val()) === " "){
-        document.getElementById("firstTab").classList.add('active');
+      else if(inputCheck.length === 0) {
+        console.log(tabs[0].add('active'));
+        //document.getElementById("firstTab").classList.add('active');
 
       }
       else{
