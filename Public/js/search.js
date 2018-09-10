@@ -40,10 +40,8 @@ function myFunction() {
 /**
 TO DO'S:
 1. Search is working for tabs' content
-1.b. Need to also find a way to also search through 'tabs' and
-1.c. iterate over container?
-2. Once phrase or letters inputted, enter will return results
-3. Review and incorporate some of these https://freshman.tech/wikipedia-javascript/
-4. Style Results
-4. Start working on accordions
+2. Search through tab content and css found word
+3. Found word, the affiliate tab should be active too
+4. Think we'll eventually have to refactor where we're searching through entire container and running conditionals for tabs and tabContent
+5. Start working on accordions
 **/
