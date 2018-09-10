@@ -9,8 +9,6 @@ function myFunction() {
 
     for(i=0; i < tabs.length; i++) {
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
-      //TO DO: search through tab's textContent
-      //var tabTextReview = container[0].textContent.toUpperCase().indexOf(filter);
       if(tabReview > 0){
         tabs[i].classList.add('active');
       }
@@ -22,6 +20,22 @@ function myFunction() {
         tabs[i].classList.remove('active');
       }
     }
+    for (i=0; i < tabContent.length; i++){
+      tabContentReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
+      if(tabContentReview > 0){
+        tabContent[i].classList.add('active');
+      }
+      else if(inputCheck.length === 0){
+        tabContent[i].classList.remove('active');
+        document.getElementById("kitchenAppliances").classList.add('active');
+      }
+      else{
+        tabContent[i].classList.remove('active');
+      }
+
+    }
+
+
 }
 /**
 TO DO'S:
