@@ -14,11 +14,9 @@ function myFunction() {
       if(tabReview > 0){
         tabs[i].classList.add('active');
       }
-      //TO DO: if empty input, make kitchen tab active
       else if(inputCheck.length === 0) {
-        console.log(tabs[0].add('active'));
-        //document.getElementById("firstTab").classList.add('active');
-
+        tabs[i].classList.remove('active');
+        document.getElementById("firstTab").classList.add('active');
       }
       else{
         tabs[i].classList.remove('active');
