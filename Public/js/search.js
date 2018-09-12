@@ -24,6 +24,9 @@ function myFunction() {
       tabContentReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
       if(tabContentReview > 0){
         tabContent[i].classList.add('active');
+        thisTabID = tabContent[i].getAttribute('id');
+
+        console.log($("#"+thisTabID)[0].innerText.css({backgroundColor: "yellow"}));
       }
       else if(inputCheck.length === 0){
         tabContent[i].classList.remove('active');
@@ -34,8 +37,6 @@ function myFunction() {
       }
 
     }
-
-
 }
 /**
 TO DO'S:
