@@ -7,9 +7,15 @@ function myFunction() {
     body = document.body.getElementsByTagName("*");
     var inputCheck = $.trim($("#myInput").val());
 
-    for(i=tabs=tabContent=0; tabs < tabs.length && tabConent < tabContent.length; i++, tabs++ tabContent++) {
-      
-      tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
+    container = document.getElementsByClassName("container");
+    //looking to traverse through dom
+    //run conditionals on both tabs and tabContent
+    //need to figure a way to assign to THIS tab, THIS tabContent
+    for(i=0; i < container.length; i++) {
+      tabReview = container[0].children[2].innerHTML.toUpperCase().indexOf(filter);
+      tabs = container[0].children[2];
+      console.log('tabs', this.tabs);
+      /**tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       if(tabReview > 0){
         tabs[i].classList.add('active');
       }
@@ -19,24 +25,7 @@ function myFunction() {
       }
       else{
         tabs[i].classList.remove('active');
-      }
-
-    }
-
-    for(i=0; i < tabContent.length; i++) {
-      console.log(tabContent[i]);
-      
-      tabContentReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
-      if(tabContentReview > 0){
-        //tabs[i].classList.add('active');
-      }
-      else if(inputCheck.length === 0) {
-        //tabs[i].classList.remove('active');
-        //document.getElementById("firstTab").classList.add('active');
-      }
-      else{
-        //tabs[i].classList.remove('active');
-      }
+      }**/
 
     }
     
