@@ -7,7 +7,7 @@ function myFunction() {
     body = document.body.getElementsByTagName("*");
     var inputCheck = $.trim($("#myInput").val());
 
-    for(i=0; i < tabs.length; i++) {
+    for(i=tabs=tabContent=0; tabs < tabs.length && tabConent < tabContent.length; i++, tabs++ tabContent++) {
       
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       if(tabReview > 0){
@@ -19,6 +19,23 @@ function myFunction() {
       }
       else{
         tabs[i].classList.remove('active');
+      }
+
+    }
+
+    for(i=0; i < tabContent.length; i++) {
+      console.log(tabContent[i]);
+      
+      tabContentReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
+      if(tabContentReview > 0){
+        //tabs[i].classList.add('active');
+      }
+      else if(inputCheck.length === 0) {
+        //tabs[i].classList.remove('active');
+        //document.getElementById("firstTab").classList.add('active');
+      }
+      else{
+        //tabs[i].classList.remove('active');
       }
 
     }
