@@ -4,10 +4,11 @@ function myFunction() {
     filter = input.value.toUpperCase();
     tabs = document.getElementsByTagName("li");
     tabContent = document.getElementsByClassName("tab-pane");
-    container = document.getElementsByClassName("container");
+    body = document.body.getElementsByTagName("*");
     var inputCheck = $.trim($("#myInput").val());
 
     for(i=0; i < tabs.length; i++) {
+      
       tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       if(tabReview > 0){
         tabs[i].classList.add('active');
@@ -19,24 +20,9 @@ function myFunction() {
       else{
         tabs[i].classList.remove('active');
       }
-    }
-    for (i=0; i < tabContent.length; i++){
-      tabContentReview = tabContent[i].innerHTML.toUpperCase().indexOf(filter);
-      if(tabContentReview > 0){
-        tabContent[i].classList.add('active');
-        thisTabID = tabContent[i].getAttribute('id');
-
-        console.log($("#"+thisTabID)[0].innerText.css({backgroundColor: "yellow"}));
-      }
-      else if(inputCheck.length === 0){
-        tabContent[i].classList.remove('active');
-        document.getElementById("kitchenAppliances").classList.add('active');
-      }
-      else{
-        tabContent[i].classList.remove('active');
-      }
 
     }
+    
 }
 /**
 TO DO'S:
