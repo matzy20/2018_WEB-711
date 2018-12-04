@@ -14,7 +14,7 @@ function myFunction() {
     for(i=0; i < container.length; i++) {
       tabReview = container[0].children[2].innerHTML.toUpperCase().indexOf(filter);
       tabs = container[0].children[2];
-      console.log('tabs', this.tabs);
+      //console.log('tabs', this.tabs);
       /**tabReview = tabs[i].innerHTML.toUpperCase().indexOf(filter);
       if(tabReview > 0){
         tabs[i].classList.add('active');

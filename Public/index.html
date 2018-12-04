@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .hidden{
+      display: none;
+    }
+  </style>
+  <script>
+    function show_more(){
+      $('span.toggleText').removeClass('hidden');
+      $('a#showMore').addClass('hidden');
+    }
+  </script>
 </head>
 <body>
 
@@ -27,7 +38,7 @@
   <div class="tab-content">
     <div id="kitchenAppliances" class="tab-pane active">
       <h3>Kitchen Appliances</h3>
-      <p>refrigerator, french doors, smart fridge, microwave, stove top, oven</p>
+      <p>refrigerator, french doors, smart fridge, microwave, stove top, oven Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="javascript:void(0);" onclick="show_more();" id="showMore">Show More</a> <span class="toggleText hidden">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
     </div>
     <div id="bathroomAppliances" class="tab-pane">
       <h3>Bathroom Appliances</h3>
